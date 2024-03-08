@@ -1,5 +1,5 @@
 # import flask
-from flask import Flask
+from flask import Flask, render_template
 
 # create flask app
 app = Flask (__name__)
@@ -8,7 +8,8 @@ app = Flask (__name__)
 @app.route("/")
 
 def hello_world():
-  return "Hello Worl!"
+  return render_template ('home.html')
+
 
 # this is to run the app
 if __name__ == "__main__":
