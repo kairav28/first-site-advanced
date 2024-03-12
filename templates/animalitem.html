@@ -13,6 +13,14 @@
     {% endif %}
   </div>
   <div class="col-3">   
+    
+    <!-- removing the button for now and replacing with an anchor which will open and email with preset email id and text
+    
     <button type="button" class = "btn btn-outline-primary">Add fact</button>
+
+    -->
+    <a href="mailto:kairav@prathaminternational.org?subject=Add a new fact for {{animal['name']}}" type="button" class = "btn btn-outline-primary">Add fact</a>
+
+  <!-- for automatic mail generation code, there is a tool called mailtolink.me -->
   </div>
 </div>
