@@ -4,11 +4,37 @@ from flask import Flask, render_template
 # create flask app
 app = Flask (__name__)
 
+# making a python list to create a small database for now, to reference in html
+ANIMALS =[
+  {
+    'id':1,
+    'name':'Lion',
+    'diet':'Carnivore',
+    'habitat': 'Savahna'
+  },
+  {
+    'id':2,
+    'name':'Deer',
+    'diet':'Herbivore',
+    'habitat': 'Forest'
+  },
+  {
+    'id':3,
+    'name':'Dog',
+    'diet':'Omnivore',
+
+  }
+]
+
+
+
+
 # register a route to the application, here "/" means home page, after that the fuction runs the scrpit to print the text
 @app.route("/")
 
 def hello_world():
-  return render_template ('home.html')
+  # sending database / dictionary to html, by passing argument below
+  return render_template ('home-bs.html', animals=ANIMALS)
 
 
 # this is to run the app

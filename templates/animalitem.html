@@ -1,0 +1,18 @@
+<div class="border-bottom row" style = "margin-bottom:16px;  padding-bottom:8px;">
+  <!-- added row in class above to add columns in bootstrap. two collumns, one is 9 and other is 3-->
+  <div class="col-9">
+    <h4 style = "margin-bottom:8px;">
+      {{animal['name']}}
+    </h4>
+    <div><b>Diet:</b> {{animal['diet']}}</div>
+  
+    {% if 'habitat' in animal%} 
+    <div><b>Habitat:</b> {{animal['habitat']}}</div>
+    {% else %}
+    <div><b>Habitat:</b> Unknown</div>
+    {% endif %}
+  </div>
+  <div class="col-3">   
+    <button type="button" class = "btn btn-outline-primary">Add fact</button>
+  </div>
+</div>
