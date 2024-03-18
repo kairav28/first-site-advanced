@@ -1,5 +1,5 @@
 import pymysql
-
+import os
 timeout = 10
 connection = pymysql.connect(
   charset="utf8mb4",
@@ -7,10 +7,10 @@ connection = pymysql.connect(
   cursorclass=pymysql.cursors.DictCursor,
   db="defaultdb",
   host="firstsite-site1.a.aivencloud.com",
-  password="AVNS_yqzK8PU2DodXhKvsr93",
+  password=os.environ['db_pass'],
   read_timeout=timeout,
   port=12336,
-  user="avnadmin",
+  user=os.environ['db_user'],
   write_timeout=timeout,
 )
 cursor = connection.cursor()
